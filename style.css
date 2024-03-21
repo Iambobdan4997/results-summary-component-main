@@ -1,0 +1,164 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root{
+    --Darkcyan:hsl(212, 21%, 14%);
+    --Cream:hsl(30, 38%, 92%);
+    --Verydarkblue:hsl(212, 21%, 14%);
+    --Darkgrayishblue:hsl(228, 12%, 48%);
+    --White:hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 50%;
+    padding: 3rem;
+}
+
+#Holder{
+    display: flex;
+    width: 100%;
+    background-color: var(--White);
+    border-radius: 2rem;
+    margin:10rem;
+    margin-right: 0.2rem;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.left{
+    padding: 3rem;
+    width: 50%;
+}
+
+.right{
+    width: 50%;
+}
+
+h3{
+    color: var(--Darkgrayishblue);
+    letter-spacing: 1em;
+    margin-bottom: 3rem;
+}
+
+h1{
+    margin-bottom: 3rem;
+}
+
+.para{
+    color: var(--Darkgrayishblue);
+    margin-bottom: 3rem;
+}
+
+.num {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+p{
+    font-size: 18px;
+}
+
+.num p{
+    color:rgb(37, 70, 37);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+sup{
+    text-underline-offset: initial;
+    color: #000;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+button{
+    width: 10rem;
+    height: 3rem;
+    border: 2rem;
+    background-color: rgb(37, 70, 37);
+    cursor: pointer;
+    color: var(--White);
+    background-image: url(./images/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 1rem;
+    font-style: block;
+    border-radius: 2rem;
+}
+
+button:hover{
+    background-color: var(--Verydarkblue);
+    color: white;
+}
+
+/*For laptop Screens*/
+@media screen and (min-width:1500px) {
+    #Holder{
+        width: 50%;
+        height: 50%;
+    }
+    
+
+    button{
+        width: 15rem;
+    }
+}
+
+/*For large Sreens*/
+@media screen and (max-width:1950px) {
+    #Holder{
+        width: 60%;
+        height: 60%;
+    }
+    
+}
+
+/*For tablet phones*/
+@media screen and (min-width:900px) and (max-width:1400px) {
+    #Holder{
+        width: 120%;
+        height: 70%;
+    }
+
+    body{
+        width: 70%;
+        margin-left: -4rem;
+    }
+}
+
+/*For Mobie Phone*/
+@media screen and (max-width:899px) {
+    #Holder{
+        display: grid;
+        width: 200%;
+        height: 70%;
+    }
+
+    .right{
+        width: 100%;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    img{
+        width: 100%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 1rem;
+    }
+}
